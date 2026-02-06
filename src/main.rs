@@ -99,8 +99,8 @@ let mut input = String::new();
     let lines: Vec<String> = reader
         .lines()
         .filter_map(|l| l.ok())
-        .enumerate() // enumerate lines starting from 0
-        .filter(|(idx, _)| *idx + 1 != line_num) // keep all lines except the one with this line number
+        .enumerate() 
+        .filter(|(idx, _)| *idx + 1 != line_num) 
         .map(|(_, line)| line)
         .collect();
 
